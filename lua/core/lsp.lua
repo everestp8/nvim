@@ -7,9 +7,16 @@ end
 local cmplsp = require("cmp_nvim_lsp")
 local cap = cmplsp.default_capabilities()
 
+-- TODO: Dar enable(vim.lsp) e ensure_install(mason) automaticamente em todos os servidores configurados na pasta lsp/
+local servers = {
+    "lua_ls",
+    "rust_analyzer",
+    "pyright"
+}
+
 vim.diagnostic.config({
     virtual_lines = true,
-    virtual_text = true,
+    virtual_text = false,
     underline = true,
     update_in_insert = false,
     severity_sort = true,
@@ -18,15 +25,12 @@ vim.diagnostic.config({
     },
 })
 
-vim.lsp.config('*', {
-    capabilities = cap,
-    on_attach = on_attach
-})
+for _, serve_name in ipairs(servers) do
+    vim.lsp.config(serve_name, {
+        capabilities = cap,
+        on_attach = on_attach
+    })
+end
 
--- TODO: Dar enable(vim.lsp) e ensure_install(mason) automaticamente em todos os servidores configurados na pasta lsp/
-vim.lsp.enable({
-    "lua_ls",
-    "rust_analyzer",
-    "pyright"
-})
+vim.lsp.enable(servers)
 

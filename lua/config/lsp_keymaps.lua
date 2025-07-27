@@ -5,7 +5,7 @@ function M.set_lsp_keymaps(bufnr)
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 	local keymap = vim.keymap
 
-	keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- go to definition
+	vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- go to definition
 	keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 	keymap.set("n", "gi", vim.lsp.buf.implementation, opts) -- go to implementation
 	keymap.set("n", "gr", vim.lsp.buf.references, opts) -- list references
@@ -16,3 +16,4 @@ function M.set_lsp_keymaps(bufnr)
 end
 
 return M
+

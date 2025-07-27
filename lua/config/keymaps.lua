@@ -28,7 +28,7 @@ vim.keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 vim.keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 -- Automation mappings
-local fn = require("config.core.functions")
+local fn = require("config.functions")
 local opts = { noremap = true, silent = true }
 
 vim.keymap.set("n", "<leader>oo", fn.add_semicolon, opts)

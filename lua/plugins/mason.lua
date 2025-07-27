@@ -2,7 +2,6 @@ return {
 	"mason-org/mason.nvim",
 	dependencies = {
 		"mason-org/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
 	},
 	config = function()
 		local mason = require("mason")
@@ -23,7 +22,7 @@ return {
 				"jdtls"
 			},
 			automatic_installation = true,
-			automatic_enable = true
+			automatic_enable = false
 		})
 	end
 }

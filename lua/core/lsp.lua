@@ -11,7 +11,12 @@ local cap = cmplsp.default_capabilities()
 local servers = {
     "lua_ls",
     "rust_analyzer",
-    "pyright"
+    "pyright",
+    "gopls",
+    "ts_ls",
+    "html",
+    "cssls",
+    "emmet_language_server"
 }
 
 vim.diagnostic.config({

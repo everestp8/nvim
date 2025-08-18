@@ -3,12 +3,10 @@ vim.g.mapleader = " "
 -- General mappings
 vim.keymap.set('i', 'jj', '<Esc>') -- jj to Esc
 vim.keymap.set("t", "jj", "<C-\\><C-n>") -- exit terminal
-vim.keymap.set("n", "<leader>ww", ":w<CR>") -- save
-vim.keymap.set("n", "<leader>qq", ":q<CR>") -- quit
-vim.keymap.set("n", "<leader>q!", ":q!<CR>") -- quit
-vim.keymap.set("n", "<leader>qa", ":qa<CR>") -- quit all
-vim.keymap.set("n", "<leader>wq", ":wq<CR>") -- save and quit
-vim.keymap.set({ "v", "x", "s" }, "<leader>qq", "<Esc>") -- quit modes
+vim.keymap.set("n", "<leader>w", ":w<CR>") -- save
+vim.keymap.set("n", "<leader>q", ":q<CR>") -- quit
+vim.keymap.set("n", "<leader>Q", ":Q<CR>") -- quit
+vim.keymap.set({ "v", "x", "s" }, "<leader>q", "<Esc>") -- quit modes
 vim.keymap.set("v", "p", '"_dP') -- save paste in visual
 vim.keymap.set("v", "<Tab>", ">gv")
 vim.keymap.set("v", "<S-Tab>", "<gv")

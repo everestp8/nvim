@@ -12,11 +12,13 @@ return {
 		"hrsh7th/cmp-path",
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
-		"rafamadriz/friendly-snippets"
+		"rafamadriz/friendly-snippets",
+        "zbirenbaum/copilot-cmp"
 	},
 	config = function()
 		local cmp = require('cmp')
 		require('luasnip.loaders.from_vscode').lazy_load()
+        require("copilot_cmp").setup()
 
 		cmp.setup({
 			mapping = cmp.mapping.preset.insert({
@@ -39,6 +41,7 @@ return {
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
 				{ name = "buffer" },
+                { name = "copilot" },
 				{ name = "luasnip" },
 				{ name = "path" },
 			}),

@@ -13,6 +13,7 @@ A minimal and modular Neovim configuration designed for productivity and easy cu
 - **Inline code lenses**
 - **File tree** with nvim-tree
 - **Autocompletion** (LSP, LuaSnip, path, etc.)
+- **Github Copilot** completion
 - **Autopairs**
 - **Live server preview**
 - **Telescope** and **Snipe** for fuzzy navigation

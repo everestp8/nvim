@@ -22,13 +22,14 @@ vim.keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 -- Tab mappings
 vim.keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 vim.keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-vim.keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
-vim.keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
+vim.keymap.set("n", "<leader>o", ":tabn<CR>") --  go to next tab
+vim.keymap.set("n", "<leader>i", ":tabp<CR>") --  go to previous tab
+vim.keymap.set("n", "t", ":lua require(\"nvim-tree.api\").node.open.tab()<CR>") -- open nvimtree file in a new tab
 
 -- Automation mappings
 local fn = require("config.functions")
 local opts = { noremap = true, silent = true }
 
-vim.keymap.set("n", "<leader>oo", fn.add_semicolon, opts)
+vim.keymap.set("n", "<leader>nn", fn.add_semicolon, opts)
 vim.keymap.set("n", "<leader>rr", fn.run_current_file, opts)
 

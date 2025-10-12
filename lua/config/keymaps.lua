@@ -5,7 +5,7 @@ vim.keymap.set('i', 'jj', '<Esc>') -- jj to Esc
 vim.keymap.set("t", "jj", "<C-\\><C-n>") -- exit terminal
 vim.keymap.set("n", "<leader>w", ":w<CR>") -- save
 vim.keymap.set("n", "<leader>q", ":q<CR>") -- quit
-vim.keymap.set("n", "<leader>Q", ":Q<CR>") -- quit
+vim.keymap.set("n", "<leader>Q", ":q!<CR>") -- quit
 vim.keymap.set({ "v", "x", "s" }, "<leader>q", "<Esc>") -- quit modes
 vim.keymap.set("v", "p", '"_dP') -- save paste in visual
 vim.keymap.set("v", "<Tab>", ">gv")
@@ -24,7 +24,6 @@ vim.keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 vim.keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 vim.keymap.set("n", "<leader>o", ":tabn<CR>") --  go to next tab
 vim.keymap.set("n", "<leader>i", ":tabp<CR>") --  go to previous tab
-vim.keymap.set("n", "t", ":lua require(\"nvim-tree.api\").node.open.tab()<CR>") -- open nvimtree file in a new tab
 
 -- Automation mappings
 local fn = require("config.functions")

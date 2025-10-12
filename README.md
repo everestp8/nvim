@@ -11,7 +11,7 @@ A minimal and modular Neovim configuration designed for productivity and easy cu
 - **Comments automation**
 - **Git signs** in the gutter
 - **Inline code lenses**
-- **File tree** with nvim-tree
+- **File tree** with NeoTree
 - **Autocompletion** (LSP, LuaSnip, path, etc.)
 - **Github Copilot** completion
 - **Autopairs**

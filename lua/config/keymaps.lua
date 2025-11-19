@@ -3,13 +3,25 @@ vim.g.mapleader = " "
 -- General mappings
 vim.keymap.set('i', 'jj', '<Esc>') -- jj to Esc
 vim.keymap.set("t", "jj", "<C-\\><C-n>") -- exit terminal
+vim.keymap.set({ "v", "x", "s" }, "<leader>q", "<Esc>") -- quit modes
+vim.keymap.set({ 'n', 'o', 'v' }, '<S-h>', '^') -- move to beginning of line
+vim.keymap.set({ 'n', 'o', 'v' }, '<S-l>', '$') -- move to end of line
+
+-- Selection mappings
+vim.keymap.set("v", "p", '"_dP') -- save paste in visual
+vim.keymap.set({'n', 'v'}, '<leader>y', '"+y') -- yank motion
+vim.keymap.set({'n', 'v'}, '<leader>d', '"+d') -- delete motion
+vim.keymap.set('n', '<leader>p', '"+p')  -- paste after cursor
+vim.keymap.set('n', '<leader>P', '"+P')  -- paste before cursor
+vim.keymap.set("v", "<Tab>", ">gv") -- indent in visual
+vim.keymap.set("v", "<S-Tab>", "<gv") -- unindent in visual
+
+-- Buffer mappings
 vim.keymap.set("n", "<leader>w", ":w<CR>") -- save
 vim.keymap.set("n", "<leader>q", ":q<CR>") -- quit
 vim.keymap.set("n", "<leader>Q", ":q!<CR>") -- quit
-vim.keymap.set({ "v", "x", "s" }, "<leader>q", "<Esc>") -- quit modes
-vim.keymap.set("v", "p", '"_dP') -- save paste in visual
-vim.keymap.set("v", "<Tab>", ">gv")
-vim.keymap.set("v", "<S-Tab>", "<gv")
+vim.keymap.set("n", "<C-o>", "<C-i>", { noremap = true, silent = true }) -- go forward
+vim.keymap.set("n", "<C-i>", "<C-o>", { noremap = true, silent = true }) -- go back
 
 -- Window mappings
 vim.keymap.set("n", "<leader>kk", "<C-w>w") -- go back

@@ -16,7 +16,7 @@ A minimal and modular Neovim configuration designed for productivity and easy cu
 - **Github Copilot** completion
 - **Autopairs**
 - **Live server preview**
-- **Telescope** and **Snipe** for fuzzy navigation
+- **Telescope** for fuzzy navigation
 
 ## 🔧 LSP Servers
 Configured language servers:

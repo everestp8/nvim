@@ -1,7 +1,12 @@
 return {
 	{
 		lazy = true,
-		"nickkadutskyi/jb.nvim"
+		"nickkadutskyi/jb.nvim",
+        ft = "dart",
+        -- config = function()
+        --     require("jb").setup()
+        --     vim.cmd.colorscheme("jb")
+        -- end
 	},
 	{
 		lazy = true,

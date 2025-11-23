@@ -24,6 +24,7 @@ return {
         require("neo-tree").setup({
             enable_git_status = true,
             enable_diagnostics = true,
+            use_popups_for_input = false,
 
             filesystem = {
                 follow_current_file = {

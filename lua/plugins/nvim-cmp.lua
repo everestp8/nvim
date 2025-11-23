@@ -45,6 +45,10 @@ return {
 				{ name = "luasnip" },
 				{ name = "path" },
 			}),
+            window = { -- for transparent.nvim
+                completion = cmp.config.window.bordered(),
+                documentation = cmp.config.window.bordered()
+            },
 		})
 	end
 }

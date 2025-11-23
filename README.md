@@ -17,6 +17,7 @@ A minimal and modular Neovim configuration designed for productivity and easy cu
 - **Autopairs**
 - **Live server preview**
 - **Telescope** for fuzzy navigation
+- Minimal **Lualine** status bar
 
 ## 🔧 LSP Servers
 Configured language servers:

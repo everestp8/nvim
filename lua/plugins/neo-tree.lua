@@ -10,18 +10,38 @@ return {
         "MunifTanjim/nui.nvim",
     },
     config = function()
-        vim.cmd [[
-            highlight GitAdded     guifg=#A6E22E
-            highlight GitModified  guifg=#FD971F
-            highlight GitDeleted   guifg=#F92672
-            highlight GitRenamed   guifg=#66D9EF
-            highlight GitUntracked guifg=#75715E
-            highlight GitIgnored   guifg=#3E3D32
-            highlight GitStaged    guifg=#A6E22E
-            highlight GitUnstaged  guifg=#FD971F
-            highlight GitConflict  guifg=#F92672
-        ]]
         require("neo-tree").setup({
+            renderers = {
+                directory = {
+                    { "indent" },
+                    { "icon" },
+                    { "current_filter" },
+                    {
+                        "container",
+                        content = {
+                            { "name",        zindex = 10 },
+                            { "clipboard",   zindex = 10 },
+                            { "diagnostics", errors_only = true, zindex = 20,     align = "right",          hide_when_expanded = true },
+                            { "git_status",  zindex = 20,        align = "right", hide_when_expanded = true },
+                        },
+                    },
+                },
+                file = {
+                    { "indent" },
+                    {
+                        "container",
+                        content = {
+                            { "name",        zindex = 10 },
+                            { "clipboard",   zindex = 10 },
+                            { "bufnr",       zindex = 10 },
+                            { "modified",    zindex = 20, align = "right" },
+                            { "diagnostics", zindex = 20, align = "right" },
+                            { "git_status",  zindex = 20, align = "right" },
+                        },
+                    },
+                },
+            },
+
             enable_git_status = true,
             enable_diagnostics = true,
             use_popups_for_input = false,
@@ -38,7 +58,6 @@ return {
                     hide_hidden = true,
                 },
             },
-
             default_component_configs = {
                 modified = {
                     symbol = "+",
@@ -47,26 +66,15 @@ return {
                 },
                 git_status = {
                     symbols = {
-                        added     = "",
-                        modified  = "~",
-                        deleted   = "D",
-                        renamed   = "R",
-                        untracked = "?",
-                        ignored   = "!",
-                        staged    = "A",
-                        unstaged  = "U",
-                        conflict  = "x",
-                    },
-                    highlight = {
-                        added     = "GitAdded",     -- verde
-                        modified  = "GitModified",  -- laranja
-                        deleted   = "GitDeleted",   -- vermelho
-                        renamed   = "GitRenamed",   -- azul
-                        untracked = "GitUntracked", -- cinza
-                        ignored   = "GitIgnored",   -- cinza escuro
-                        staged    = "GitStaged",    -- verde
-                        unstaged  = "GitUnstaged",  -- laranja
-                        conflict  = "GitConflict",  -- magenta
+                        added     = "A",
+                        modified  = "M",
+                        deleted   = "",
+                        renamed   = "",
+                        untracked = "U",
+                        ignored   = "",
+                        staged    = "",
+                        unstaged  = "",
+                        conflict  = "",
                     },
                 },
             },

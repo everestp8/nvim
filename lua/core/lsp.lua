@@ -17,7 +17,7 @@ local servers = {
     "html",
     "cssls",
     "emmet_language_server",
-    "dartls"
+    "clangd"
 }
 
 vim.diagnostic.config({

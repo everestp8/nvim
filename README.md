@@ -13,10 +13,12 @@ A minimal and modular Neovim configuration designed for productivity and easy cu
 - **Inline code lenses**
 - **File tree** with NeoTree
 - **Autocompletion** (LSP, LuaSnip, path, etc.)
-- **Github Copilot** completion
 - **Autopairs**
 - **Live server preview**
 - **Telescope** for fuzzy navigation
+- **Flash.nvim** for code navigation
+- **Harpoon** for buffer organization
+- HTTP requests with **Kulala.nvim**
 - Minimal **Lualine** status bar
 
 ## 🔧 LSP Servers
@@ -25,6 +27,7 @@ Configured language servers:
 - **HTML, CSS, JavaScript/TypeScript**
 - **Go**
 - **Rust**
+- **C**
 - **Python**
 
 ## 🚀 Installation
@@ -38,7 +41,7 @@ Then open Neovim and run:
 :Lazy sync
 ```
 
-## 🙏 Credits
+## 🙏 Special thanks 
 
 > Inspired by @adibhanna and @josean-dev configurations
 

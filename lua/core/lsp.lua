@@ -7,7 +7,6 @@ end
 local cmplsp = require("cmp_nvim_lsp")
 local cap = cmplsp.default_capabilities()
 
--- TODO: Dar enable(vim.lsp) e ensure_install(mason) automaticamente em todos os servidores configurados na pasta lsp/
 local servers = {
     "lua_ls",
     "rust_analyzer",

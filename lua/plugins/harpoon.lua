@@ -9,8 +9,6 @@ return {
         vim.keymap.set("n", "<leader>d", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
         vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
         vim.keymap.set("n", "<leader>A", function() harpoon:list():remove() end)
-        vim.keymap.set("n", "<leader>i", function() harpoon:list():prev() end)
-        vim.keymap.set("n", "<leader>o", function() harpoon:list():next() end)
 
         harpoon:extend({
 			UI_CREATE = function(cx)

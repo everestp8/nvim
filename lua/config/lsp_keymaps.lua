@@ -9,10 +9,11 @@ function M.set_lsp_keymaps(bufnr)
 	keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 	keymap.set("n", "gi", vim.lsp.buf.implementation, opts) -- go to implementation
 	keymap.set("n", "gr", vim.lsp.buf.references, opts) -- list references
+	keymap.set("n", "gy", vim.lsp.buf.signature_help, opts) -- show function signature help
 	keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts) -- show code actions
 	keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- rename symbol
-	keymap.set("n", "gy", vim.lsp.buf.signature_help, opts) -- show function signature help
     keymap.set("n", "<leader>lf", vim.lsp.buf.format, opts) -- format buffer
+    keymap.set("n", "<leader>O", vim.diagnostic.open_float, opts) -- open diagnostic
 end
 
 return M

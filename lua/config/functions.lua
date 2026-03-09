@@ -1,4 +1,5 @@
 local M = {}
+M.command = ""
 
 -- Adds semicolon at the enf of the line
 function M.add_semicolon()
@@ -10,22 +11,11 @@ end
 
 -- Run current file
 function M.run_current_file()
-    local file = vim.fn.expand("%:p")
-    local ext = vim.fn.expand("%:e")
-    local cmd = {
-        ["py"] = "python3 " .. file,
-        ["js"] = "node " .. file,
-        ["lua"] = "lua " .. file,
-        ["c"] = "gcc " .. file .. " -o /tmp/a.out && /tmp/a.out",
-        ["cpp"] = "g++ " .. file .. " -o /tmp/a.out && /tmp/a.out",
-        ["sh"] = "bash " .. file
-    }
-
-    if cmd[ext] then
-        vim.cmd("split | terminal " .. cmd[ext])
-    else
-        print("File extesion not supported." .. ext)
+    if M.command == "" then
+        M.command = vim.fn.input("Run command: ")
     end
+
+    vim.cmd("split | terminal " .. M.command)
 end
 
 return M

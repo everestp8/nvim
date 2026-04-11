@@ -2,9 +2,9 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 return {
-	"nvim-tree/nvim-tree.lua",
-	config = function()
-		require("nvim-tree").setup({
+    "nvim-tree/nvim-tree.lua",
+    config = function()
+        require("nvim-tree").setup({
             on_attach = function(bufnr)
                 local api = require("nvim-tree.api")
                 local function opts(desc)
@@ -17,6 +17,16 @@ return {
                 vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Close Directory'))
                 vim.keymap.set('n', 'H', api.tree.collapse_all, opts('Collapse All'))
             end,
+            diagnostics = {
+                enable = true,
+                show_on_dirs = true,
+                icons = {
+                    hint = "H",
+                    info = "I",
+                    warning = "W",
+                    error = "E",
+                },
+            },
             renderer = {
                 icons = {
                     web_devicons = {
@@ -39,7 +49,6 @@ return {
             }
         })
 
-		vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
-	end,
+        vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFindFileToggle<CR>")
+    end,
 }
-

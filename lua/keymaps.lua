@@ -10,7 +10,7 @@ vim.keymap.set({"n", "v", "o"}, "<A-v>", "<C-v>") -- remap VISUALBLOCK to alt+v
 vim.keymap.set("n", "*", "*N") -- match next without moving
 vim.keymap.set("n", "n", "nzz") -- next search result and center
 vim.keymap.set("n", "N", "Nzz") -- previous search result and center
-vim.keymap.set({ "n", "v" }, "<leader>s", "/") -- search
+vim.keymap.set({ "n", "v" }, "<leader>S", "/") -- search
 
 vim.keymap.set("n", "<down>", "jzz") -- down and center
 vim.keymap.set("n", "<up>", "kzz") -- up and center
@@ -21,10 +21,10 @@ vim.keymap.set({ 'n', 'o', 'v' }, '<S-l>', '$') -- move to end of line
 
 -- Selection mappings
 vim.keymap.set("v", "p", '"_dP') -- save paste in visual
-vim.keymap.set({'n', 'v'}, '<leader>y', '"+y') -- yank motion
-vim.keymap.set({'n', 'v'}, '<leader>d', '"+d') -- delete motion
-vim.keymap.set('n', '<leader>p', '"+p')  -- paste after cursor
-vim.keymap.set('n', '<leader>P', '"+P')  -- paste before cursor
+vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y') -- yank motion
+vim.keymap.set({ 'n', 'v' }, '<leader>d', '"+d') -- delete motion
+vim.keymap.set({'n', 'v' }, '<leader>p', '"+p')  -- paste after cursor
+vim.keymap.set({'n', 'v' }, '<leader>P', '"+P')  -- paste before cursor
 vim.keymap.set("v", "<Tab>", ">gv") -- indent in visual
 vim.keymap.set("v", "<S-Tab>", "<gv") -- unindent in visual
 

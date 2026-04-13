@@ -18,7 +18,7 @@ function M.run_current_file(ask_command)
     local current_file_path = vim.api.nvim_buf_get_name(0)
     local expanded_cmd = string.gsub(M.command, "!", current_file_path)
 
-    vim.cmd("split | terminal " .. expanded_cmd)
+    vim.cmd("bo split | terminal " .. expanded_cmd)
 end
 
 -- Search for term or character in the current line

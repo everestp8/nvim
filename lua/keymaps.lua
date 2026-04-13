@@ -45,7 +45,7 @@ vim.keymap.set("n", "<leader>Wh", "<C-w>s") -- split window horizontally
 vim.keymap.set("n", "<leader>We", "<C-w>=") -- make split windows equal width & height
 
 -- Automation mappings
-local fn = require("config.functions")
+local fn = require("functions")
 local opts = { noremap = true, silent = true }
 
 vim.keymap.set("n", "<leader>u", function() fn.add_char(";") end, opts)

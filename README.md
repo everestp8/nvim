@@ -1,21 +1,19 @@
 # Neovim Configuration
 
-A minimal and modular Neovim configuration designed for productivity and easy customization.
+A minimal Neovim configuration designed for productivity and easy customization.
 
 ## ✨ Features
-- **Lazy.nvim** for package management
 - Editor options and general keymappings
 - Dedicated **LSP keymaps** for enhanced workflow
-- Colorscheme: *Monokai Pro*
+- Colorscheme: **Monokai Pro**
 - **Indentation guides** with blanklines
 - **Git signs** in the gutter
-- **File tree* with NvimTree 
-- **Autocompletion** (LSP, LuaSnip, path, etc.)
-- **Autopairs**
+- **File tree** with NvimTree 
+- **Autocompletion**  with nvim-cmp (LSP, LuaSnip, path, etc.)
+- **Autopairs** and **Surround**
 - **Telescope** for fuzzy navigation
 - **Flash.nvim** for code navigation
 - **Harpoon** for buffer organization
-- HTTP requests with **Kulala.nvim**
 - Minimal **Lualine** status bar
 - **Vimtex** for LaTeX document writing
 
@@ -44,8 +42,4 @@ Then open Neovim and run:
 ```sh
 :Lazy sync
 ```
-
-## 🙏 Special thanks 
-
-> Inspired by @adibhanna and @josean-dev configurations
 

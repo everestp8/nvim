@@ -1,8 +1,10 @@
-local keymaps = require('config.lsp_keymaps')
+local keymaps = require('lsp_keymaps')
 
 local function on_attach(_, bufnr)
 	keymaps.set_lsp_keymaps(bufnr)
 end
+
+vim.pack.add({ 'https://github.com/hrsh7th/cmp-nvim-lsp' })
 
 local cmplsp = require("cmp_nvim_lsp")
 local cap = cmplsp.default_capabilities()

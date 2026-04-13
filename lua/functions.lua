@@ -21,12 +21,5 @@ function M.run_current_file(ask_command)
     vim.cmd("bo split | terminal " .. expanded_cmd)
 end
 
--- Search for term or character in the current line
-function M.find_in_line()
-    local current_line_number = vim.fn.line(".")
-
-    vim.fn.feedkeys("/\\%" .. current_line_number .. "l", "n")
-end
-
 return M
 

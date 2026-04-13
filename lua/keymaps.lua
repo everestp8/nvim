@@ -12,8 +12,6 @@ vim.keymap.set("n", "n", "nzz") -- next search result and center
 vim.keymap.set("n", "N", "Nzz") -- previous search result and center
 vim.keymap.set({ "n", "v" }, "<leader>s", "/") -- search
 
-vim.keymap.set("n", "<C-d>", "5<C-e>M") -- speed down and center
-vim.keymap.set("n", "<C-u>", "5<C-y>M") -- speed up and center
 vim.keymap.set("n", "<down>", "jzz") -- down and center
 vim.keymap.set("n", "<up>", "kzz") -- up and center
 vim.keymap.set("n", "<right>", "lzz") -- right and center
@@ -40,8 +38,8 @@ vim.keymap.set("n", "<leader>i", "<C-o>") -- go back
 -- Window mappings
 vim.keymap.set("n", "<leader>k", "<C-w>w") -- go back
 vim.keymap.set("n", "<leader>j", "<C-w>W") -- go foward
-vim.keymap.set("n", "<leader>Wv", "<C-w>v") -- split window vertically
-vim.keymap.set("n", "<leader>Wh", "<C-w>s") -- split window horizontally
+vim.keymap.set("n", "<leader>Wj", "<C-w>v") -- split window vertically
+vim.keymap.set("n", "<leader>Wl", "<C-w>s") -- split window horizontally
 vim.keymap.set("n", "<leader>We", "<C-w>=") -- make split windows equal width & height
 
 -- Automation mappings
@@ -52,5 +50,4 @@ vim.keymap.set("n", "<leader>u", function() fn.add_char(";") end, opts)
 vim.keymap.set("n", "<leader>U", function() fn.add_char(",") end, opts)
 vim.keymap.set("n", "<leader>rr", function() fn.run_current_file(false) end, opts)
 vim.keymap.set("n", "<leader>RR", function() fn.run_current_file(true) end, opts)
-vim.keymap.set({ "n", "v" }, "<leader>S", fn.find_in_line, opts)
 

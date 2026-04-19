@@ -10,7 +10,7 @@ vim.keymap.set({"n", "v", "o"}, "<A-v>", "<C-v>") -- remap VISUALBLOCK to alt+v
 vim.keymap.set("n", "*", "*N") -- match next without moving
 vim.keymap.set("n", "n", "nzz") -- next search result and center
 vim.keymap.set("n", "N", "Nzz") -- previous search result and center
-vim.keymap.set({ "n", "v" }, "<leader>S", "/") -- search
+vim.keymap.set({ "n", "v" }, "<leader>s", "/") -- search
 
 vim.keymap.set("n", "<down>", "jzz") -- down and center
 vim.keymap.set("n", "<up>", "kzz") -- up and center
@@ -38,8 +38,8 @@ vim.keymap.set("n", "<leader>i", "<C-o>") -- go back
 -- Window mappings
 vim.keymap.set("n", "<leader>k", "<C-w>w") -- go back
 vim.keymap.set("n", "<leader>j", "<C-w>W") -- go foward
-vim.keymap.set("n", "<leader>Wj", "<C-w>v") -- split window vertically
-vim.keymap.set("n", "<leader>Wl", "<C-w>s") -- split window horizontally
+vim.keymap.set("n", "<leader>Wl", "<C-w>v") -- split window vertically
+vim.keymap.set("n", "<leader>Wj", "<C-w>s") -- split window horizontally
 vim.keymap.set("n", "<leader>We", "<C-w>=") -- make split windows equal width & height
 
 -- Automation mappings

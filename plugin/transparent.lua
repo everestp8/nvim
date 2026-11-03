@@ -11,6 +11,7 @@ require("transparent").setup({
         'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
         'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
         'EndOfBuffer', 'FloatBorder', 'NormalFloat', 'NormalFloatLine', '@markup.raw.block.markdown',
+        "ErrorMsg", "DiagnosticVirtualTextError", "DiagnosticVirtualTextInfo", "DiagnosticVirtualTextHint",
     }
 })
 
@@ -18,8 +19,6 @@ require('transparent').clear_prefix('NvimTree')
 require('transparent').clear_prefix('Telescope')
 require('transparent').clear_prefix('BufferLine')
 require('transparent').clear_prefix('lualine')
-
-vim.o.winborder = 'single'
 
 vim.cmd.TransparentEnable()
 

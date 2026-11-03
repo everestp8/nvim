@@ -11,6 +11,8 @@ require('nvim-treesitter').install {
     "go",
     "rust",
     "python",
+    "java",
+    "hurl",
     "c",
     "bash",
     "lua",

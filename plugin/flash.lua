@@ -39,13 +39,11 @@ vim.api.nvim_create_autocmd('CmdlineLeave', {
                 local stats = vim.fn.searchcount({ recompute = 1, maxcount = 0 })
                 local cnt = stats.total or 0
 
-                if cnt <= 1 then
-                    return
+                if cnt > 1 then
+                    require('flash').jump({
+                        pattern = vim.fn.getreg('/')
+                    })
                 end
-
-                require('flash').jump({
-                    pattern = vim.fn.getreg('/')
-                })
 
                 vim.cmd('nohlsearch')
                 vim.cmd('norm zz')

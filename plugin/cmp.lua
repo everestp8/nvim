@@ -5,7 +5,6 @@ vim.pack.add({
     'https://github.com/L3MON4D3/LuaSnip',
     'https://github.com/saadparwaiz1/cmp_luasnip',
     'https://github.com/rafamadriz/friendly-snippets',
-    'https://github.com/zbirenbaum/copilot-cmp',
     'https://github.com/hrsh7th/nvim-cmp'
 })
 
@@ -16,13 +15,12 @@ end
 
 local cmp = require('cmp')
 require('luasnip.loaders.from_vscode').lazy_load()
-require("copilot_cmp").setup()
 
 cmp.setup({
     mapping = cmp.mapping.preset.insert({
         ["<M-k>"] = cmp.mapping.select_prev_item(),
         ["<M-j>"] = cmp.mapping.select_next_item(),
-        ["<M-p>"] = cmp.mapping.complete(),
+        ["<M-CR>"] = cmp.mapping.complete(),
         ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 if not cmp.get_selected_entry() then
@@ -37,7 +35,6 @@ cmp.setup({
         end, { "i", "s" }),
     }),
     sources = cmp.config.sources({
-        { name = "copilot" },
         { name = "nvim_lsp" },
         { name = "buffer" },
         { name = "luasnip" },

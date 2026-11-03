@@ -1,51 +1,51 @@
 # Neovim Configuration
 
-A minimal and modular Neovim configuration designed for productivity and easy customization.
+A ~~minimal~~ lean Neovim configuration designed for ~~productivity~~ fun and ease of use. Built to keep only the essential features I need for work.
 
-## ✨ Features
-- **Lazy.nvim** for package management
-- Editor options and general keymappings
-- Dedicated **LSP keymaps** for enhanced workflow
-- Colorscheme: *Monokai Pro*
-- **Indentation guides** with blanklines
-- **Git signs** in the gutter
-- **File tree* with NvimTree 
-- **Autocompletion** (LSP, LuaSnip, path, etc.)
-- **Autopairs**
-- **Telescope** for fuzzy navigation
-- **Flash.nvim** for code navigation
-- **Harpoon** for buffer organization
-- HTTP requests with **Kulala.nvim**
-- Minimal **Lualine** status bar
-- **Vimtex** for LaTeX document writing
+## Features
 
-## 🔧 LSP Servers
-Configured language servers:
-- **Lua**
-- **HTML, CSS, JavaScript/TypeScript**
-- **Go**
-- **Rust**
-- **C**
-- **Python**
+- **Native Package Management**: Powered by Neovim 0.12's built-in `vim.pack` with reproducible locking (`nvim-pack-lock.json`).
+- **Modern LSP Integration**: Configured via native `vim.lsp.config` / `vim.lsp.enable` with `nvim-lspconfig` and dedicated LSP keymaps.
+- **Syntax & Highlighting**: **nvim-treesitter** with parsers for major programming languages and markup formats.
+- **Autocompletion**: **nvim-cmp** with LuaSnip, LSP sources, path, buffer, and friendly-snippets.
+- **Fuzzy Navigation**: **Telescope** for fast file search, live grep, and buffer navigation.
+- **Code Navigation**: **Flash.nvim** for lightning-fast cursor jumps and search integration.
+- **File Explorer**: **NvimTree** with a centered floating window interface.
+- **Editing Helpers**: **nvim-autopairs** and **nvim-surround** for quick delimiter manipulation.
+- **Git Integration**: **Gitsigns** for Git diff signs in the gutter.
+- **Aesthetics & UI**:
+  - Colorscheme: **Monokai Pro** (Spectrum filter)
+  - **transparent.nvim** for seamless terminal transparency
+  - Minimal **Lualine** status bar
+  - **Indentation guides** via `indent-blankline.nvim` with custom scope highlighting
+- **HTTP Client**: **hurl.nvim** for running `.hurl` requests directly inside the editor (`<leader>rr`).
+- **Language-Specific Tooling**:
+  - **Java & Spring Boot**: Full Java IDE workflow with **nvim-java**, **spring-boot.nvim**, and **nvim-dap**.
+  - **LaTeX**: **Vimtex** configured with LuaLaTeX, Zathura PDF viewer, custom output directory (`dist`), and auto-cleanup.
 
-## 🚀 Installation
-Clone this repository into your Neovim config folder:
-```sh
-git clone https://github.com/everestp8/nvim ~/.config/nvim
-```
+## Requirements
 
-To install LSP servers, run:
-```sh
-./install_lsps.sh
-```
+- **Neovim** >= 0.12
+- Git
+- C compiler (e.g. `gcc` or `clang` for Treesitter parsers)
+- `ripgrep` and `fd` (for Telescope)
+- Node.js & npm (for web LSPs and language servers)
 
-Then open Neovim and run:
+## Installation
 
-```sh
-:Lazy sync
-```
+1. Clone this repository into your Neovim configuration directory:
+   ```sh
+   git clone https://github.com/everestp8/nvim ~/.config/nvim
+   ```
 
-## 🙏 Special thanks 
+2. Install LSP servers on Arch (pls adapt the script if you want to use in another distros):
+   ```sh
+   ./install_lsps.sh
+   ```
 
-> Inspired by @adibhanna and @josean-dev configurations
+3. Launch Neovim:
+   ```sh
+   nvim
+   ```
+   Plugins are managed and loaded automatically upon startup via `vim.pack`.
 
